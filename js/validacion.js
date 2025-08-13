@@ -22,8 +22,14 @@ if (!nombre || !apellido || !email || !password1 || !password2 || !terminos) {
     return;
 }
 
+
 if (password1.length < 6) {
     showAlertError("⚠️ La contraseña debe tener al menos 6 caracteres.");
+    return;
+}
+
+if (password1 != password2) {
+    showAlertError("⚠️ Las contrseñas deben conincidir");
     return;
 }
 
